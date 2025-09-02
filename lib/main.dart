@@ -30,7 +30,15 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('PRAKTIKUM MOBILE LANJUT')),
+        body: const Center(
+          child: Text(
+            'Halo nama saya adalah Sulthon Aris Setiawan',
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
     );
   }
 }
