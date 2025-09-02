@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: const Text('PRAKTIKUM MOBILE LANJUT')),
         body: const Center(
           child: Text(
-            'Halo nama saya adalah Sulthon Aris Setiawan',
+            'Halo nama saya adalah Sulthon Aris Setiawan, SKom',
             textAlign: TextAlign.center,
           ),
         ),
