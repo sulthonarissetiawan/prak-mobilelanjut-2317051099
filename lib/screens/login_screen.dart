@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
-import 'dashboard_screen.dart';
+import 'splash_screen.dart'; // <-- PERUBAHAN 1: Tambahkan import ini
 
 class LoginScreen extends StatefulWidget {
   static const route = '/signin';
@@ -70,11 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // logo
-                Image.asset(
-                  'assets/images/JustDuit.png',
-                  height: 80,
-                  fit: BoxFit.contain,
-                ),
+                const JustduitLogo(),
                 const SizedBox(height: 16),
 
                 // judul
@@ -165,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         } else {
                           Navigator.pushNamedAndRemoveUntil(
                             context,
-                            DashboardScreen.route,
+                            SplashScreen.route,
                             (route) => false,
                           );
                         }
@@ -190,6 +186,19 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class JustduitLogo extends StatelessWidget {
+  const JustduitLogo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      'assets/images/JustDuit.png',
+      height: 120,
+      fit: BoxFit.contain,
     );
   }
 }
